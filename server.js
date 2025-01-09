@@ -7,6 +7,8 @@ server.get("/", (req, res) => {
 });
 
 const port = 3001;
+
+//type to run: node server.js
 server.listen(port, () => {
   console.log(`Servidor iniciado! Porta:${port}`);
 });
