@@ -1,9 +1,12 @@
-import Home from "./pages/Home";
+import Sidebar from "./myComponents/Sidebar/Sidebar";
+import DashboardStructure from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Home />
+      <DashboardStructure sidebar={<Sidebar />}>
+        <p>Conteúdo principal</p>
+      </DashboardStructure>
     </>
   );
 }

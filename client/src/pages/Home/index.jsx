@@ -1,16 +1,14 @@
-import Sidebar from "../../myComponents/Sidebar/Sidebar";
-
-function Home() {
+function DashboardStructure(props) {
   return (
     <>
-      <div className="bg-red-400 w-full h-screen flex">
-        <div className="bg-blue-200 w-1/6">
-          <Sidebar />
-        </div>
-        <div className="bg-blue-500 w-full m-4">informações produtos</div>
+      <div className="bg-red-400 w-full h-screen md:flex">
+        {props.sidebar && (
+          <div className="bg-blue-200 md:w-1/5">{props.sidebar}</div>
+        )}
+        <div className="bg-blue-500 md:w-full md:m-4">{props.children}</div>
       </div>
     </>
   );
 }
 
-export default Home;
+export default DashboardStructure;
